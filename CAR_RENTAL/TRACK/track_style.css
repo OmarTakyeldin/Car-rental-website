@@ -1,0 +1,210 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
+
+*{
+    --color1:#274870;
+    --color2:#9DC4F2;
+    --color3:#549AF0;
+    --color4:#495B70;
+    --color5:#437CC2;
+}
+
+
+.body{
+  background-size: cover;
+}
+
+
+.login-page {
+  max-width: 1080px;
+  padding: 8% 0 0;
+  margin: auto;
+
+}
+.container {
+  position: relative;
+  border-radius: 20px;
+  z-index: 1;
+  background: #a2ccec;
+  max-width: 1080px;
+  margin: 0 auto 100px;
+  padding: 3em;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+i{
+    position: absolute;
+    color: #60626e;
+    margin-right: 1.25rem;
+    min-width: 23px;
+    cursor: pointer;
+    z-index: 1000
+}  
+
+
+
+.top{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.container input {
+  font-family:  "Roboto",FontAwesome, sans-serif;
+  outline: 0;
+  background: #dee9f4;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 16px;
+  border-radius:10px;
+
+  
+}
+.container button {
+  
+  font-family: "Titillium Web", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  outline: 0;
+  background: var(--color3);
+  width: 100%;
+  border: 0;
+  border-radius:30px;
+  margin: 0px 0px 8px;
+  padding: 15px;
+  color: #FFFFFF;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 3em;
+
+}
+.container button:hover,.container button:focus{
+  background: var(--color5);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+.container button:active{
+  transform: translateY(2px);
+  box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background: var(--color5); /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, var(--color5), var(--color3));
+  background: -moz-linear-gradient(right, var(--color5), var(--color3));
+  background: -o-linear-gradient(right, var(--color5), var(--color3));
+  background: linear-gradient(to left, var(--color5), var(--color3));
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;    
+}
+
+
+
+h1 {
+    font-family: 'Exo 2', sans-serif;
+    color: var(--color1);
+    text-shadow: 2px 2px var(--color2)
+  }
+
+.customer-info{
+    text-align: center;
+    position: relative;
+    background-color: #dee9f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 10px;
+    padding: 1em;
+
+}
+
+.car-info{
+
+    background-color: #dee9f4;
+    border: 0;
+    border-radius: 10px;
+    text-align:center;
+
+}
+
+#reservation-info{
+    display: grid;
+    grid-template-columns: clamp(220px, 40%, 280px) 1fr;
+    gap: 2em;
+}
+
+@media(max-width:820px) {
+
+    #reservation-info{
+        display: grid;
+        grid-template-columns: clamp(220px, 40%, 280px) 1fr;
+        grid-template-rows: 1fr,1fr;
+        gap: 2em;
+    }
+
+    .car-info{
+        grid-column: 1/-1;
+        grid-row-start: 2;
+    }
+
+    .customer-info{
+        grid-row-start: 1;
+        grid-column: 1/-1;
+    }
+
+}
+
+@media(max-width:500px){
+
+    img{
+        display: none;
+    }
+
+}
+
+@media(max-width:370px){
+    .container{
+        padding: 15px;
+    }
+    .customer-info{
+      padding: 0.3em;
+      font-size: 15px;
+    }
+    .car-info{
+      font-size: 15px;
+    }
+
+    #reservation-info{
+      grid-template-columns: 1fr;
+    }
+
+    
+}
+
+
+.customer-info .label {
+    position: relative;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    outline: 0;
+    background: #92989d;
+    width: 70%;
+    border: 0;
+    border-radius:30px;
+    margin: 0px 0px 8px;
+    padding: 15px;
+    color: #FFFFFF;
+    margin-top: 3em;
+  
+  }
